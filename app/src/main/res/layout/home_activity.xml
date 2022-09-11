@@ -157,20 +157,6 @@
                                 android:textStyle="bold"></TextView>
 
                             <TextView
-                                android:id="@+id/rt"
-                                android:layout_width="match_parent"
-                                android:layout_height="60dp"
-                                android:layout_column="9"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="10dp"
-                                android:layout_weight="20"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:text="RT"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textStyle="bold"></TextView>
-
-                            <TextView
                                 android:id="@+id/prior"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
@@ -218,7 +204,7 @@
                     android:layout_margin="8dp"
                     android:padding="5dp"
                     android:textColor="@android:color/black"
-                    android:visibility="gone"
+                    android:visibility="invisible"
                     app:layout_constraintTop_toBottomOf="@id/outputContainer"
                     tools:layout_editor_absoluteX="8dp" />
 
@@ -229,7 +215,18 @@
                     android:layout_margin="8dp"
                     android:padding="5dp"
                     android:textColor="@android:color/black"
-                    android:visibility="gone"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@id/avgTurnAround"
+                    tools:layout_editor_absoluteX="8dp" />
+
+                <TextView
+                    android:id="@+id/avgNormalized"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="5dp"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible"
                     app:layout_constraintTop_toBottomOf="@id/avgTurnAround"
                     tools:layout_editor_absoluteX="8dp" />
 

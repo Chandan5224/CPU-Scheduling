@@ -16,14 +16,15 @@
                 android:id="@+id/input_process_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="20dp"
-                android:paddingTop="20dp"
-                android:paddingLeft="10dp"
-                android:paddingBottom="20dp"
-                android:layout_margin="5dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
+                android:layout_margin="5dp"
                 android:layout_weight="20"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:text="P1"
+                android:textAlignment="center"
                 android:textSize="14sp"></TextView>
 
             <EditText

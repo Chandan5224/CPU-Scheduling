@@ -53,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
     TextView priority, time_quantum;
     TextView avgTurnAround;
     TextView avgWaiting;
+    TextView avgNormalized;
     int tq = 2;
     boolean noTQexe = false;
 
@@ -88,6 +89,7 @@ public class HomeActivity extends AppCompatActivity {
                         time_quantum.setVisibility(View.GONE);
                         avgTurnAround.setVisibility(View.GONE);
                         avgWaiting.setVisibility(View.GONE);
+                        avgNormalized.setVisibility(View.GONE);
                         editExecute();
                         break;
                     case 6:
@@ -97,6 +99,7 @@ public class HomeActivity extends AppCompatActivity {
                         time_quantum.setVisibility(View.GONE);
                         avgTurnAround.setVisibility(View.GONE);
                         avgWaiting.setVisibility(View.GONE);
+                        avgNormalized.setVisibility(View.GONE);
                         setUpPriority();
                         editExecute();
                         break;
@@ -108,6 +111,7 @@ public class HomeActivity extends AppCompatActivity {
                             time_quantum.setVisibility(VISIBLE);
                             avgTurnAround.setVisibility(View.GONE);
                             avgWaiting.setVisibility(View.GONE);
+                            avgNormalized.setVisibility(View.GONE);
                             editExecute();
                         } else {
                             return;
@@ -150,6 +154,7 @@ public class HomeActivity extends AppCompatActivity {
         time_quantum = findViewById(R.id.time_quantum);
         avgTurnAround = findViewById(R.id.avgTurnAround);
         avgWaiting = findViewById(R.id.avgWaiting);
+        avgNormalized= findViewById(R.id.avgNormalized);
     }
 
 
@@ -226,8 +231,10 @@ public class HomeActivity extends AppCompatActivity {
             cpuQueueView.startAnimation(a);
             avgWaiting.setVisibility(VISIBLE);
             avgTurnAround.setVisibility(VISIBLE);
-            avgWaiting.setText("Average waiting time : " + Output.getAverageWaitingTime(output));
-            avgTurnAround.setText("Average turn around time : " + Output.getAverageTurnAround(output));
+            avgNormalized.setVisibility(VISIBLE);
+            avgWaiting.setText("Average Waiting Time : " + Output.getAverageWaitingTime(output));
+            avgTurnAround.setText("Average Turn Around Time : " + Output.getAverageTurnAround(output));
+            avgNormalized.setText("Average Normalized Turn Around Time : "+Output.getNormalizedTime(output));
         }
 
     }
@@ -286,7 +293,7 @@ public class HomeActivity extends AppCompatActivity {
             TextView wt = (TextView) rowView.findViewById(R.id.sum_wt);
             TextView tat = (TextView) rowView.findViewById(R.id.sum_tat);
             TextView ct = (TextView) rowView.findViewById(R.id.sum_ct);
-            wt.setText(String.valueOf(out[i].getWaiting()));
+            wt.setText(String.valueOf(out[i].   getWaiting()));
             tat.setText(String.valueOf(out[i].getTurnAround()));
             ct.setText(String.valueOf(out[i].getCompletion()));
         }

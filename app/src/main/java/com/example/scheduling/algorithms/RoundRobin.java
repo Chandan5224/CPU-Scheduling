@@ -53,6 +53,7 @@ public class RoundRobin {
                     out[current].setTurnAround(last - inputCopy[current].getaTime());
                     out[current].setWaiting(out[current].getTurnAround() - input[current].getbTime());
                     out[current].setCompletion(out[current].getTurnAround()+input[current].getaTime());
+                    out[current].setBurst(input[current].getbTime());
                     count++;
                 }
                 cpuQueue.add(last);

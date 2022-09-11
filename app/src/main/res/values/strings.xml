@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CPU Scheduling Algorithms</string>
+    <string name="process_name">Process Name</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="burst_time">Burst Time</string>
+    <string name="remove_row">Remove Row</string>
+    <string name="add_row">Add Row</string>
 </resources>

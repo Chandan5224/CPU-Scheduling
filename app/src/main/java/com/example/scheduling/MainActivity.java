@@ -34,11 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         add = findViewById(R.id.button_add);
         delete = findViewById(R.id.row_delete);
         submit = findViewById(R.id.submit);
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    addRow();
+                addRow();
             }
         });
         delete.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             TextView edit_text1 = (TextView) rowView.findViewById(R.id.input_process_name);
             EditText edit_text2 = (EditText) rowView.findViewById(R.id.input_at);
             EditText edit_text3 = (EditText) rowView.findViewById(R.id.input_bt);
-            edit_text1.setText("P" + i);
+            edit_text1.setText("P" + (i+2));
             layoutList.addView(rowView);
             rv.add(rowView);
             i++;
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setToast() {
-        Toast.makeText(this, "No rows to remove!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "At least one row needed!", Toast.LENGTH_LONG).show();
     }
 
     private void noRowToast() {

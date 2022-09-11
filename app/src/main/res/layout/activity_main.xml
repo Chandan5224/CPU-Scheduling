@@ -34,9 +34,9 @@
                     android:layout_gravity="center"
                     android:textStyle="bold"
                     android:padding="5dp"
-                    android:text="Process Name"
+                    android:text="@string/process_name"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="15"></TextView>
+                    android:layout_weight="15"/>
 
 
                 <TextView
@@ -47,9 +47,9 @@
                     android:layout_gravity="center"
                     android:textStyle="bold"
                     android:padding="5dp"
-                    android:text="Arrival Time"
+                    android:text="@string/arrival_time"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="20"></TextView>
+                    android:layout_weight="20"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -58,9 +58,9 @@
                     android:layout_gravity="center"
                     android:textStyle="bold"
                     android:padding="5dp"
-                    android:text="Burst Time"
+                    android:text="@string/burst_time"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="20"></TextView>
+                    android:layout_weight="20" />
 
 
             </TableRow>
@@ -69,13 +69,16 @@
                 android:id="@+id/layout_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"></LinearLayout>
-
+                android:orientation="vertical">
+                <include
+                    layout="@layout/row_add_input"
+                    />
+            </LinearLayout>
 
         </TableLayout>
 
         <LinearLayout
-            android:layout_width="381dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -83,15 +86,16 @@
                 android:id="@+id/button_add"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_primary"
-                android:drawableRight="@drawable/ic_add"
+                android:drawableEnd="@drawable/ic_add"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="Add Row"
                 android:textAllCaps="false"
-                android:textColor="@android:color/white"></Button>
+                android:layout_weight="1"
+                android:textColor="@android:color/white"/>
 
             <Button
                 android:id="@+id/row_delete"
@@ -105,7 +109,8 @@
                 android:paddingRight="10dp"
                 android:text="Remove Row"
                 android:textAllCaps="false"
-                android:textColor="@android:color/white"></Button>
+                android:textColor="@android:color/white"
+                android:layout_weight="1"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -123,7 +128,7 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></Button>
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

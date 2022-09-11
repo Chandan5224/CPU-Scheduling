@@ -6,22 +6,26 @@ import android.os.Parcelable;
 public class Output implements Parcelable {
     private int turnAround;//Turn around time
     private int waiting;//Waiting time
+    private int burst;
     private int completion;
 
     protected Output(Parcel in) {
         turnAround = in.readInt();
         waiting = in.readInt();
         completion = in.readInt();
+        burst=in.readInt();
+
     }
 
     public Output() {
 
     }
 
-    public Output(int wt, int tat,int ct,int rt) {
+    public Output(int wt, int tat,int ct,int bt) {
         this.waiting = wt;
         this.turnAround = tat;
         this.completion = ct;
+        this.burst= bt;
     }
 
     @Override
@@ -29,6 +33,7 @@ public class Output implements Parcelable {
         dest.writeInt(turnAround);
         dest.writeInt(waiting);
         dest.writeInt(completion);
+        dest.writeInt(burst);
     }
 
     @Override
@@ -65,6 +70,14 @@ public class Output implements Parcelable {
         this.waiting = waiting;
     }
 
+    public int getBurst() {
+        return burst;
+    }
+
+    public void setBurst(int burst) {
+        this.burst = burst;
+    }
+
     public  void setCompletion(int completion){
         this.completion = completion;
     }
@@ -89,6 +102,21 @@ public class Output implements Parcelable {
             avg += o.waiting;
         }
         avg /= outputs.length;
+        return Float.valueOf(String.format("%.2f", avg));
+    }
+
+    public static float getBurstTurn(Output[] outputs) {
+        float avg = 0;
+        for (Output o : outputs) {
+            avg += o.burst;
+        }
+        avg /= outputs.length;
+        return Float.valueOf(String.format("%.2f", avg));
+    }
+
+    public static float getNormalizedTime(Output[] outputs) {
+        float avg = 0;
+        avg = getAverageTurnAround(outputs)/getBurstTurn(outputs);
         return Float.valueOf(String.format("%.2f", avg));
     }
 }

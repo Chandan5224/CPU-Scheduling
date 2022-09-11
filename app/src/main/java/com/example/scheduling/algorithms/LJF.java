@@ -55,6 +55,7 @@ public class LJF {
                 last = last + input[current].getbTime();
                 out[current].setTurnAround(last - input[current].getaTime());
                 out[current].setCompletion(out[current].getTurnAround()+input[current].getaTime());
+                out[current].setBurst(input[current].getbTime());
                 cpuQueue.add(last);
             } else {
                 cpuQueue.add(-1);
