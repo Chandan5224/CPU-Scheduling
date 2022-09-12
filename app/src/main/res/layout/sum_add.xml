@@ -50,6 +50,20 @@
 
 
             <TextView
+                android:id="@+id/sum_wt"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:inputType="number" />
+
+
+            <TextView
                 android:id="@+id/sum_ct"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -64,30 +78,16 @@
 
             <TextView
                 android:id="@+id/sum_tat"
-                android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:paddingRight="15dp"
-                android:paddingBottom="5dp"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:textAlignment="center"
+                android:layout_marginRight="10dp"
                 android:layout_weight="20"
                 android:gravity="center"
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/sum_wt"
-                android:layout_height="match_parent"
-                android:layout_width="wrap_content"
+                android:inputType="number"
                 android:paddingRight="15dp"
                 android:paddingBottom="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="20"
-                android:gravity="center"
-                android:inputType="number" />
-
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/sum_prior"

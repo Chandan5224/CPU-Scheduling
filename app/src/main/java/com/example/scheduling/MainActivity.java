@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             i++;
 
         } else {
-            Toast.makeText(this, "Limit Reached! Atmost 7 inputs allowed. ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Limit Reached! Atmost 8 inputs allowed. ", Toast.LENGTH_LONG).show();
         }
     }
 

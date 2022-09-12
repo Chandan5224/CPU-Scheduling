@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home_activity);
         initViews();
         rows = new ArrayList<>();
-        algoritms = new String[]{"Select algorithm", "FCFS", "SJF", "SRTF", "LJF", "LRTF", "Priority Non-Preemptive", "Priority Preemptive", "Round robin"};
+        algoritms = new String[]{"Select algorithm", "FCFS", "SJF", "SRJF", "LJF", "LRJF", "Priority Non-Preemptive", "Priority Preemptive", "Round robin"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_textview, algoritms);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         algoClass.setAdapter(adapter);

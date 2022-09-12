@@ -8,7 +8,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        tools:layout_editor_absoluteX="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +66,8 @@
                     <TableLayout
                         android:id="@+id/processTable"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
 
                         <TableRow
                             android:layout_width="match_parent"
@@ -201,7 +204,7 @@
                     android:id="@+id/avgTurnAround"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_marginTop="10dp"
                     android:padding="5dp"
                     android:textColor="@android:color/black"
                     android:visibility="invisible"
@@ -212,7 +215,6 @@
                     android:id="@+id/avgWaiting"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
                     android:padding="5dp"
                     android:textColor="@android:color/black"
                     android:visibility="invisible"
@@ -223,7 +225,7 @@
                     android:id="@+id/avgNormalized"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_marginBottom="10dp"
                     android:padding="5dp"
                     android:textColor="@android:color/black"
                     android:visibility="visible"
@@ -245,7 +247,6 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
                     android:padding="5dp"
                     android:text="Gantt Chart :"
                     android:textColor="@android:color/black"
@@ -258,7 +259,6 @@
                     android:id="@+id/cpu_queue_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
                     android:padding="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

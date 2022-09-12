@@ -32,11 +32,11 @@
                     android:layout_height="50dp"
                     android:layout_column="1"
                     android:layout_gravity="center"
-                    android:textStyle="bold"
+                    android:layout_weight="15"
                     android:padding="5dp"
                     android:text="@string/process_name"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="15"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
@@ -45,22 +45,22 @@
                     android:layout_height="50dp"
                     android:layout_column="2"
                     android:layout_gravity="center"
-                    android:textStyle="bold"
+                    android:layout_weight="20"
                     android:padding="5dp"
                     android:text="@string/arrival_time"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="20"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_column="3"
                     android:layout_gravity="center"
-                    android:textStyle="bold"
+                    android:layout_weight="20"
                     android:padding="5dp"
                     android:text="@string/burst_time"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_weight="20" />
+                    android:textStyle="bold" />
 
 
             </TableRow>
