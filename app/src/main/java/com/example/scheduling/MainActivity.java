@@ -83,8 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (i <= 6) {
             final View rowView = getLayoutInflater().inflate(R.layout.row_add_input, null, false);
             TextView edit_text1 = (TextView) rowView.findViewById(R.id.input_process_name);
-            EditText edit_text2 = (EditText) rowView.findViewById(R.id.input_at);
-            EditText edit_text3 = (EditText) rowView.findViewById(R.id.input_bt);
             edit_text1.setText("P" + (i+2));
             layoutList.addView(rowView);
             rv.add(rowView);

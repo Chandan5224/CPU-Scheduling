@@ -3,9 +3,8 @@ package com.example.scheduling;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.Gravity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -39,7 +38,7 @@ import java.util.List;
 import static android.view.View.VISIBLE;
 
 public class HomeActivity extends AppCompatActivity {
-    String[] algoritms;
+    String[] algorithms;
     Spinner algoClass;
     TableLayout processTable;
     CpuQueueView cpuQueueView;
@@ -63,8 +62,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home_activity);
         initViews();
         rows = new ArrayList<>();
-        algoritms = new String[]{"Select algorithm", "FCFS", "SJF", "SRJF", "LJF", "LRJF", "Priority Non-Preemptive", "Priority Preemptive", "Round robin"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_textview, algoritms);
+        algorithms = new String[]{"Select algorithm", "FCFS", "SJF", "SRJF", "LJF", "LRJF", "Priority Non-Preemptive", "Priority Preemptive", "Round robin"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_textview, algorithms);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         algoClass.setAdapter(adapter);
         execute();
@@ -225,10 +224,10 @@ public class HomeActivity extends AppCompatActivity {
             outputContainer.setVisibility(VISIBLE);
             cpuQueueView.setUp(cpuQueue, input);
             //cpuQueueView.startAnimation((Animation)AnimationUtils.loadAnimation(this,R.anim.shake));
-            Animation a = AnimationUtils.loadAnimation(this, R.anim.shake);
-            a.reset();
-            cpuQueueView.clearAnimation();
-            cpuQueueView.startAnimation(a);
+//            Animation a = AnimationUtils.loadAnimation(this, R.anim.shake);
+//            a.reset();
+//            cpuQueueView.clearAnimation();
+//            cpuQueueView.startAnimation(a);
             avgWaiting.setVisibility(VISIBLE);
             avgTurnAround.setVisibility(VISIBLE);
             avgNormalized.setVisibility(VISIBLE);
@@ -243,8 +242,12 @@ public class HomeActivity extends AppCompatActivity {
         for (int i = 0; i < input.length; i++) {
             final View rowView = getLayoutInflater().inflate(R.layout.sum_add, null, false);
             TextView pname = (TextView) rowView.findViewById(R.id.sum_pro);
+            pname.setGravity(Gravity.CENTER);
             TextView at = (TextView) rowView.findViewById(R.id.sum_at);
             TextView bt = (TextView) rowView.findViewById(R.id.sum_bt);
+            at.setGravity(Gravity.CENTER);
+            bt.setGravity(Gravity.CENTER);
+            rowView.setPadding(3,0,0,0);
             pname.setText(input[i].getpName());
             at.setText(String.valueOf(input[i].getaTime()));
             bt.setText(String.valueOf(input[i].getbTime()));
@@ -266,6 +269,9 @@ public class HomeActivity extends AppCompatActivity {
             TextView wt = (TextView) rowView.findViewById(R.id.sum_wt);
             TextView tat = (TextView) rowView.findViewById(R.id.sum_tat);
             TextView ct = (TextView) rowView.findViewById(R.id.sum_ct);
+            wt.setGravity(Gravity.CENTER);
+            tat.setGravity(Gravity.CENTER);
+            ct.setGravity(Gravity.CENTER);
             wt.setText("");
             tat.setText("");
             ct.setText("");
@@ -293,9 +299,12 @@ public class HomeActivity extends AppCompatActivity {
             TextView wt = (TextView) rowView.findViewById(R.id.sum_wt);
             TextView tat = (TextView) rowView.findViewById(R.id.sum_tat);
             TextView ct = (TextView) rowView.findViewById(R.id.sum_ct);
-            wt.setText(String.valueOf(out[i].   getWaiting()));
+            wt.setText(String.valueOf(out[i].getWaiting()));
             tat.setText(String.valueOf(out[i].getTurnAround()));
             ct.setText(String.valueOf(out[i].getCompletion()));
+            wt.setGravity(Gravity.CENTER);
+            tat.setGravity(Gravity.CENTER);
+            ct.setGravity(Gravity.CENTER);
         }
     }
 
