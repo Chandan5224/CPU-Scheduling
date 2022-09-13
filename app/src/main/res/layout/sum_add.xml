@@ -21,12 +21,12 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:paddingRight="15dp" />
+                android:paddingRight="20dp" />
 
             <TextView
                 android:id="@+id/sum_at"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="5dp"
                 android:layout_marginRight="10dp"
@@ -39,7 +39,7 @@
             <TextView
                 android:id="@+id/sum_bt"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="5dp"
                 android:layout_marginRight="10dp"
@@ -52,7 +52,7 @@
             <TextView
                 android:id="@+id/sum_wt"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="5dp"
                 android:layout_marginRight="10dp"
@@ -65,7 +65,7 @@
 
             <TextView
                 android:id="@+id/sum_ct"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
@@ -78,7 +78,7 @@
 
             <TextView
                 android:id="@+id/sum_tat"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
@@ -92,7 +92,7 @@
             <EditText
                 android:id="@+id/sum_prior"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="5dp"
                 android:layout_marginRight="10dp"
